@@ -12,8 +12,13 @@
 
 <header class="top_header">
 	<div class="wrapper cf">
-		<div class="header_third search_section menu_buttom">
-			search
+		<div class="header_third search_section menu_buttom cf">
+			<div class="menu_icon">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</div>
+			<div class="search_box">
+				<?php echo get_search_form(); ?>
+			</div>
 		</div>	
 		<div class="header_third logo_section">
 			<a href="<?php echo home_url('/'); ?>" class="logo_link"><img src="<?php echo ale_get_option('sitelogo'); ?>" /></a>			
@@ -23,7 +28,6 @@
 			<?php if (ale_get_option('insta')) { ?><a href="<?php echo ale_get_option('insta', 'aletheme') ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a><?php }?>		
 			<?php if (ale_get_option('twi')) { ?><a href="<?php echo ale_get_option('twi', 'aletheme') ?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a><?php }?>
 			<?php if (ale_get_option('fb')) { ?><a href="<?php echo ale_get_option('fb', 'aletheme') ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a><?php }?>
-
 		</div>	
 	</div>
 </header>
