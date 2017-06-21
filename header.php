@@ -28,7 +28,25 @@
 			<?php if (ale_get_option('insta')) { ?><a href="<?php echo ale_get_option('insta', 'aletheme') ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a><?php }?>		
 			<?php if (ale_get_option('twi')) { ?><a href="<?php echo ale_get_option('twi', 'aletheme') ?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a><?php }?>
 			<?php if (ale_get_option('fb')) { ?><a href="<?php echo ale_get_option('fb', 'aletheme') ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a><?php }?>
-		</div>	
+		</div>
+		<nav class="top_navigation">
+			<div class="wrapper">
+				<?php
+                    if ( has_nav_menu( 'header_menu' ) ) {
+                        wp_nav_menu(array(
+                            'theme_location'=> 'header_menu',
+                            'menu'			=> 'Header Menu',
+                            'menu_class'	=> 'ale_headermenu cf',
+                            'walker'		=> new Aletheme_Nav_Walker(),
+                            'container'		=> '',
+                        ));
+                    }
+                ?>
+                <div class="donate_button">
+                	<a href="<?php //echo ale_get_option('donate_link'); ?>"><?php _e('Donate', 'iglesia') ?></a>
+                </div>
+			</div>
+		</nav>	
 	</div>
 </header>
 <section class="home_slider"></section>
