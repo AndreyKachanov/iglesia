@@ -37,6 +37,12 @@ function aletheme_get_options() {
                         "std" => "",
                         "type" => "upload");
 
+   $options[] = array( "name" => "Insert the slider slug",
+                        "desc" => "Get the slug on the Sliders Setting Page.",
+                        "id" => "ale_homesliderslug",
+                        "std" => "",
+                        "type" => "text");
+
     $options[] = array( "name" => "Site Footer Logo",
                         "desc" => "Upload or put the site logo link (Default logo size: 133-52px)",
                         "id" => "ale_sitelogofooter",

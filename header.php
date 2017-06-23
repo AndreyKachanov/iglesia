@@ -50,5 +50,4 @@
 		</nav>	
 	</div>
 </header>
-<section class="home_slider"></section>
 
