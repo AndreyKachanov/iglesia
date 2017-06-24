@@ -44,8 +44,8 @@ function aletheme_get_options() {
                         "type" => "text");
 
     $options[] = array( "name" => "Site Footer Logo",
-                        "desc" => "Upload or put the site logo link (Default logo size: 133-52px)",
-                        "id" => "ale_sitelogofooter",
+                        "desc" => "Upload or put the site logo link",
+                        "id" => "ale_footerlogo",
                         "std" => "",
                         "type" => "upload");
 
@@ -222,6 +222,27 @@ function aletheme_get_options() {
 						"std" => "",
 						"type" => "checkbox");
 
+    $options[] = array( "name" => "Footer Settings",
+                        "type" => "heading");
+
+    $options[] = array( "name" => "Phone Number",
+                        "desc" => "Insert the phone number",
+                        "id" => "ale_footer_phone",
+                        "std" => "",
+                        "type" => "text");
+
+    $options[] = array( "name" => "Address",
+                        "desc" => "Insert the footer address",
+                        "id" => "ale_footer_address",
+                        "std" => "",
+                        "type" => "text");
+
+    $options[] = array( "name" => "Footer Email",
+                        "desc" => "Insert the footer email",
+                        "id" => "ale_footer_email",
+                        "std" => "",
+                        "type" => "text");                                                                            
+
 
 	
 	$options[] = array( "name" => "Advanced Settings",
@@ -255,7 +276,6 @@ function aletheme_get_options() {
     $options[] = array( "name" => "Footer menu title",
                         "desc" => "Insert the footer menu title",
                         "id" => "ale_footermenutitle_1",
-                        "std" => "",
                         "type" => "images",
                         "options" => array(
                             'image_1' => $imagepath.'/1col.png',
