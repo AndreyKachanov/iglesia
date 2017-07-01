@@ -8,8 +8,36 @@ if (isset($_POST['contact'])) {
 }
 get_header();
 ?>
-    <!-- Content -->
-    <div class="contacts-center">
+
+<div class="container contacts">
+    <div class="wrapper">
+        <h2 class="page_title"><?php the_title(); ?></h2>
+        
+        <?php if(have_posts()) : while (have_posts()) : the_post(); ?>
+        <div class="page_content">
+                <?php the_content(); ?>           
+        </div>
+        <?php endwhile; endif; ?>
+        
+        <div class="contacts_data cf">
+            <div class="third_part">
+                <span class='label'><i class="fa fa-phone" aria-hidden="true"></i><?php echo ale_get_meta('phone_label'); ?></span>
+                 <span class="value phone_number"><?php echo ale_get_meta('phone'); ?></span>
+            </div>
+            <div class="third_part">
+                 <span class='label'><i class="fa fa-globe" aria-hidden="true"></i><?php echo ale_get_meta('address_label'); ?></span>
+                 <span class="value"><?php echo ale_get_meta('address'); ?></span> 
+            </div>
+            <div class="third_part">
+                 <span class='label'><i class="fa fa-envelope-o" aria-hidden="true"></i><?php echo ale_get_meta('email_label'); ?></span>
+                 <span class="value emailbox"><a href="mailto:<?php echo ale_get_meta('email'); ?>"><?php echo ale_get_meta('email'); ?></a></span> 
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--     <div class="contacts-center">
         <div class="content">
 
             <div class="h2" ><?php the_title(); ?></div>
@@ -23,7 +51,7 @@ get_header();
                     </div>
                 </div>
 
-                <div class="right">
+                <div class="right"> -->
                     <form method="post" action="<?php the_permalink();?>">
                         <?php if (isset($_GET['success'])) : ?>
                             <p class="success"><?php _e('Thank you for your message!', 'aletheme')?></p>
@@ -43,9 +71,9 @@ get_header();
                         </div>
                         <?php wp_nonce_field() ?>
                     </form>
-                </div>
+<!--                 </div>
             </div>
 
         </div>
-    </div>
+    </div> -->
 <?php get_footer(); ?>
