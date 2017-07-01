@@ -40,7 +40,11 @@ jQuery(function($) {
         $('.top_navigation').css('display', 'none');  
     });
 
-
+    $('.latest-tweets').flexslider({
+        animation:'sl ide',
+        directionNav:false,
+        selector:"ul > li"
+    });
 
 });
 
