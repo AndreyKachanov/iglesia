@@ -291,7 +291,7 @@ function aletheme_get_options() {
                         "desc" => "Insert the footer menu title",
                         "id" => "ale_footermenutitle",
                         "std" => "Select a category",
-                        "type" => "text");
+                        "type" => "text");                           
 
     $options[] = array( "name" => "Footer menu title",
                         "desc" => "Insert the footer menu title",
@@ -302,6 +302,21 @@ function aletheme_get_options() {
                             'image_2' => $imagepath.'/2cl.png',
                             'image_3' => $imagepath.'/2cr.png', ),
         );
+
+    $options[] = array( "name" => "Maps Settings",
+                        "type" => "heading");
+
+    $options[] = array( "name" => "Maps Icon",
+                        "desc" => "Upload or put the icon link ",
+                        "id" => "ale_mapicon",
+                        "std" => "",
+                        "type" => "upload");
+
+    $options[] = array( "name" => "Map style",
+                        "desc" => "Insert the map style from snazzy maps service",
+                        "id" => "ale_mapstyle",
+                        "std" => "",
+                        "type" => "text");     
 	
 	return $options;
 }
