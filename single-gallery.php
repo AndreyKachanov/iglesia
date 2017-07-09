@@ -50,7 +50,8 @@
             <div class="post_content">
                 <?php the_content(); ?>
             </div>            
-    <?php endwhile;  endif;  ?>        
+    <?php endwhile;  endif;  ?>
+    <?php comments_template(); ?>        
     </div>
 </div>    
 
